@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from numpy import *
 from string import maketrans
 

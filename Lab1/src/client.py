@@ -1,6 +1,6 @@
 import sys
 import socket
-
+from scan import scanner
 
 def udp_send(dt, data):
     HOST, PORT = "localhost", 9090
@@ -38,3 +38,6 @@ if __name__ == "__main__":
         udp_send(mess, data)
     elif mtype == '-t':
         tcp_send(mess, data)
+    elif mtype == '-s':
+        data = data.split('-')
+        scanner(mess, int(data[0]), int(data[1]))
